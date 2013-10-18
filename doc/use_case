@@ -1,0 +1,13 @@
+Play Game:
+To play, user will select either "game mode" or "practice mode".
+If game mode is chosen, the player will begin on level 1, starting
+his score at 0. After each wave, he will advance to the next level.
+If user selects practice mode, he can choose the level he wants to
+start at, but no score will be kept, and upon completion of the level,
+he will be put back to the level selection screen.
+
+Functional requirements:
+
+	Display a window
+	Show objects moving in that window
+	Interaction with objects via keyboard and mouse input

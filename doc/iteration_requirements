@@ -1,0 +1,90 @@
+milestone 1 is due September 26th, Monday, 11PM. 	 
+
+Please submit your milestone 1 report to the dropbox by Monday, September 26th. 11pm.
+
+You should provide an analysis of your project's requirements. In particular,
+
+You should use English to specify the functionality of the expected product.
+
+You should also list the use-cases of your product using English
+and UML use-case diagrams using the style and format explained in lecture.
+
+I will create a dropbox for groups (teams) so that only one
+submission per group (team) is needed.
+
+On the report, you should write your team name, project name,
+team members' names. Please also identify a team leader. 
+
+You should try to start an iteration now to implement your project.
+Please identify what you had completed for the first iteration on the
+milestone report as well. You do not need to submit code.
+
+
+Milestone 2 is due Oct 10th, 11PM 
+
+The report should have 3 components:
+1. text description of the design of your system
+2. high-level UML diagrams such as package diagram for
+the logical architecture, UML class classes and interaction
+diagrams for lower level details.
+3. how the design of your system correspond to the requirements
+of the system given in the previous report.
+Identify which system component implements which use-case. 
+
+----------------------------------
+
+Please note that you will present your design in class.
+So please prepare a 10~15 minute presentation using powerpoint
+as visual aid. Also, please start programming and I expect to
+see some software demo in the presentation as well. Your app
+does not have to be complete but you need to make sure you
+have completed enough coding suitable for the 2nd iteration.
+
+
+Milestone 3 is due October 24th
+
+The report for milestone 3 is due October 24th.
+
+Please package everything in one zip file. 
+ 
+It should contain the following components:
+1. a text description of what modules you have implemented
+and how you have tested your completed modules. Describe
+your test cases. You may want to have two kinds of test cases:
+positive ones and negative ones where the positive test cases
+should always pass while the negative ones should always fail.
+Explain what test cases your code has passed and which test
+cases will be left for the next iteration.
+2. completed code.
+You should include your eclipse project file and make sure it
+contains the source files. Make sure that they are compilable.
+Provide instruction on how to test them.
+3. code documentation. Please run javadoc or use eclipse to
+generate the html API documentation. The source file should
+contain comments so that javadoc can generate API documentation
+with comments included. 
+4. explain the correspondence between your code and the design
+-- class diagrams and package diagrams.
+
+
+milestone 4 is due November 7th 	 
+
+For the 4th milestone, you will integrate the programming modules you developed
+from the previous milestone and perform some integration test. I expect to see
+some functionalities of your running program. 
+
+What to submit:
+1. introduction on what you had done since the previous milestone.
+Also discuss the measures you had taken or plan to take to apply
+the nine GRASP patterns to make your design better.
+You don't have to mention all of them, just the ones
+that you think are applicable to your design and implementation. 
+2. source code. Compiled executable program. Also include
+the instruction on how to run your program.
+ 
+3. source code documentations. Same requirement as before 
+4. test cases. Please include both the unit test cases and integration test.
+Integration test may be created within JUnit but sometimes you may not be able to.
+If you can use JUnit, please do so and document that this is actually an
+integration test. If you can't use JUnit, you should document the steps in
+running the integration 

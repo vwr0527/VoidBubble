@@ -1,0 +1,45 @@
+Legend
+* === completed
+# === under way
+? === under review
+
+==========================================================
+Iteration X:
+TODO:
+0. Give the game a game over screen!
+1. Fix the level border collision. Should not just reverse velocity on impact. Bug where the player sticks into the walls.
+2. Find a better collision detection system. Should be a centralized object. A single interaction produces calculations for a pair of entities.
+3. Add menu system. Would be nice to find a way to avoid creating a different object for each menu entry. IE: A separate class for ResolutionSliderX, a separate class for FrameRateAdjuster, a separate class for DifficultyAdjuster... etc.
+4. Make levels dynamic. Detect if goals have been achieved.
+5. Finish scoring system.
+6. More enemy types.
+==========================================================
+
+Iteration I
+
+specify the functionality of the expected product. *
+
+list the use-cases of your product using English
+and UML use-case diagrams. *
+
+Completed Main class, started Game class. Compiled
+and ran game class. Game class only creates a blank
+window.
+
+Iteration II
+1. Test of major LWJGL functions #
+	a. graphics *
+		-transparent textures *
+		-dynamic text *
+	b. sound
+		-sound effect *
+		-music
+	c. input
+		-keyboard *
+		-mouse *
+2. Create Domain Model *
+3. Elaborate on architecture *
+4. Create Design Model *
+	a. class diagram
+	b. interaction diagram
+	c. package diagram *

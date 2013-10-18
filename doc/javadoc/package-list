@@ -1,0 +1,10 @@
+vwr.project.services.audio
+vwr.project.services.graphics
+vwr.project.services.input
+vwr.project.services.storage
+vwr.project.voidbubble
+vwr.project.voidbubble.domain
+vwr.project.voidbubble.domain.world
+vwr.project.voidbubble.domain.world.entitystates
+vwr.project.voidbubble.test
+vwr.project.voidbubble.ui

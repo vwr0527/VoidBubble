@@ -1,0 +1,39 @@
+  This game is a 2D, top down, omnidirectional shooter. It will
+be controlled by keyboard and mouse. Aiming is independent of movement.
+The player will be confined in a small space called a "level".
+The enemies will "appear" at the edges of levels or at special
+"spawn points", and head towards the player in a manner specific
+to that type of enemy's attack pattern. If the enemies contact
+the player, the player explodes, and the game is over.
+This game will use basic shapes and colors to accomplish visuals,
+mostly by rendering primitives and lines. It will have sound and music,
+particle effects, and use simple collision detection. There will be
+multiple weapons types, multiple enemy types, and multiple level
+environments, but those levels will repeat after a complete set.
+The set of levels culminates in a boss fight level, after which the
+enemies will be increased in number and difficulty.
+
+Inspiration:
+http://www.youtube.com/watch?v=y-_qlaywKBs
+
+It is a Java based game, using the third party library LWJGL
+
+Detailed installation instructions here:
+http://lwjgl.org/wiki/index.php?title=Downloading_and_Setting_Up_LWJGL
+http://jmonkeyengine.org/wiki/doku.php/jme2:no_lwjgl_in_java.library.path
+***********text from the second link*************
+The preferred way is to set it on the lwjgl.jar library as described below
+and in the Eclipse Guide for jME - step 10.
+
+Assuming you have already added the lwjgl.jar to your project -
+locate it in the libraries (project properties → java build path →
+libraries tab. Now expand the branch, and you should see
+"Native library location". Select this, then click edit.
+Now click workspace, and browse to you JME project → lib → lwjgl →
+native → <whatever OS you are using> either linux, macosx, solaris or windows.
+
+
+Edit 1:
+Using TWL's PNGDecoder to load transparent .PNG files.
+Edit 2:
+No longer using TWL's PNGDecoder. Using Slick-Util library.

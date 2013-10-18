@@ -1,0 +1,110 @@
+Game Manager creates
+Setting Manager
+Score Manager
+Resource Manager
+Resource Service
+Draw Manager
+Draw Service
+Sound Manager
+Sound Service
+Input Manager
+Input Service
+World Manager
+World Service
+
+Game Manager initializes
+-Resource Manager
+-Setting Manager
+-Score Manager
+with the paths to the files they need to access. This is done
+in the constructor
+
+It also creates server-manager pairs
+[service dependent on-> manager]
+Draw Service->Draw Manager
+Sound Service->Sound Manager
+Resource Service->Resource Manager
+Input Service->Input Manager
+World Service->World Manager
+
+Setting Manager saves its settings to a file whenever
+the settings are changed.
+Score Manager saves high scores to a file whenever a
+score is set.
+
+	Class name -> Services needed
+	
+	Menu Manager -> Sound, Draw, Resource, Input, Setting, Score, World
+	World Manager ->  Sound, Draw, Resource, Input, Setting, Score
+	Input Manager -> Setting
+	Draw Manager -> Setting
+	Sound Manager -> Setting
+	
+	Service name: Services rendered
+	
+	World Service: startWorld, endWorld, (playCinematic?)
+	Input Service: getMouse, getKeyboard
+	Resource Service: getTextureFromName, getSoundFromName, getFontFromName
+	Draw Service: drawText, drawShape, drawTexture
+	Sound Service: playSound
+	
+	Manager name: public methods
+	
+	Score Manager: getScore, setScore
+	Setting Manager: readSetting, writeSetting
+
+World Manager creates a list of entities, a set of states that can be assigned
+to those entities, and the level environment which interacts with the entities.
+Entities are continuously recycled. Whenever one expires, it is allowed to be
+overwritten by a newcomer entity. Entities have "States", which dictate their
+behavior. There is only one of each state, stored in StateList. All entities
+on the same state will behave the same way, but their behavior can be dependent
+on the "count" variable in the entity. Count simply starts counting once an
+entity is created, and resets to 0 when it is recycled. States are hierarchical,
+but all entities are equal.
+
+
+Architecture version 1
+=========================================================================
+Game is responsible for setting up the major managers,
+and facilitating communication between them.
+then it will run "update" and "render" once every frame.
+
+Managers managed by Game include:
+
+Menu Manager
+Input Manager
+Draw Manager
+Sound Manager
+Setting Manager
+Score Manager
+World Manager
+
+Each manager will then set up its own components.
+
+Input Manager will need access to Setting.
+Draw Manager will need access to Resource and Setting.
+Sound Manager will need access to Resource and Setting.
+World Manager will need access to Setting, Draw, Sound, and Input.
+Menu Manager will need access to World, Setting, Input, Sound, and Draw.
+
+On startup, Game will load a settings file, high scores file, and resources
+(sound, textures, fonts, ...). Upon finishing, it will plug the necessary
+settings and resources into the components that require them.
+
+Settings Manager will be initialized with the loaded settings.
+Score Manager will be initialized with the loaded scores.
+Draw Manager will receive settings, font resources and texture resources.
+Sound Manager will receive settings and sound resources.
+Input Manager will receive settings.
+World Manager will receive the previous five managers.
+Menu Manager will receive the previous six managers.
+
+Problem:
+For logical architecture layers, the book says that resources
+should not be put on the bottom layer, but in the domain layer.
+However, right now the Draw service depends on Resource Loader.
+How can I resolve this?
+Solution:
+Have Resource loader on bottom layer. It doesn't matter.
+========================================================================
